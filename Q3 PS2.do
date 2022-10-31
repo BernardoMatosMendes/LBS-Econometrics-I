@@ -28,4 +28,4 @@ reg log_wage education experience
 local SSR_r=e(rss)
 
 *Compute F test*
-gen F=((`SSR_r'-`SSR_u')/(39-3))/((`SSR_u')/(1500-39))
+gen F=((`SSR_r'-`SSR_u')/(39))/((`SSR_u')/(1500-39))
