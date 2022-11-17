@@ -39,7 +39,7 @@ gen instrument2 = l3.diff_log_C_percapita
 gen instrument3 = l4.diff_log_C_percapita
 gen instrument4 = l5.diff_log_C_percapita
 
-ivregress 2sls diff_log_C_percapita  (diff_log_Y_percapita= instrument1 instrument2 instrument3 instrument4), first
+ivregress 2sls diff_log_C_percapita  (diff_log_Y_percapita= instrument1 instrument2 instrument3 instrument4), vce(robust) first
 eststo Q6c
 
 esttab Q6c  using "Q6c.tex", replace ///
